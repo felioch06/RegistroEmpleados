@@ -40,13 +40,8 @@
                     </div>
                 </div>
 
-                <button class="ui animated orange mg-10-top big fade button">
-                    <div class="visible content">
-                        Registrar Entrada
-                    </div>
-                    <div class="hidden content">
-                        <i class="arrow right icon"></i>
-                    </div>
+                <button class="ui orange mg-10-top big button">
+                    <p>Registrar Entrada</p>
                 </button>
                 </form>
 
@@ -66,13 +61,8 @@
                     </div>
                 </div>
 
-                <button class="ui animated orange mg-10-top big fade button">
-                    <div class="visible content">
-                        Registrar Salida
-                    </div>
-                    <div class="hidden content">
-                        <i class="arrow right icon"></i>
-                    </div>
+                <button class="ui orange mg-10-top big button">
+                        <p>Registrar Salida</p>
                 </button>
 
                 </form>
