@@ -31,6 +31,25 @@
                 <div class="ui pd-20-all segment">
                     <h2 class="ui orange header">Registrar Entrada</h2>
                     <div class="ui divider"></div>
+
+                    <form action="?class=Empleados&view=index&entrada=" method="post">
+                    <div class="field">
+                        <div class="ui left icon big fluid input">
+                            <i class="address card icon"></i>
+                        <input type="number" name="documento" placeholder="N° Documento">
+                    </div>
+                </div>
+
+                <button class="ui animated orange mg-10-top big fade button">
+                    <div class="visible content">
+                        Registrar Entrada
+                    </div>
+                    <div class="hidden content">
+                        <i class="arrow right icon"></i>
+                    </div>
+                </button>
+                </form>
+
                 </div>
             </div>
 
@@ -38,12 +57,26 @@
             <div class="ui pd-20-all center segment">
                 <h2 class="ui orange header">Registrar Salida</h2>
                 <div class="ui divider"></div>
-                <div class="field">
-                    <div class="ui left icon big fluid input">
-                        <i class="user icon"></i>
-                        <input type="email" name="correo" placeholder="Correo">
+
+                <form action="?class=Empleados&view=index&salida=" method="post">
+                    <div class="field">
+                        <div class="ui left icon big fluid input">
+                            <i class="address card icon"></i>
+                        <input type="number" name="documento" placeholder="N° Documento">
                     </div>
                 </div>
+
+                <button class="ui animated orange mg-10-top big fade button">
+                    <div class="visible content">
+                        Registrar Salida
+                    </div>
+                    <div class="hidden content">
+                        <i class="arrow right icon"></i>
+                    </div>
+                </button>
+
+                </form>
+
             </div>
         </div>
 

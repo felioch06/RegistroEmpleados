@@ -5,5 +5,8 @@
             require_once('views/all/index.php');
         }
 
+        public function consulta(){
+            require_once('views/empleado/control.php');
+        }
     }
 ?>

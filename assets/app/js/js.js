@@ -11,7 +11,6 @@ setTimeout( function(){
 
 }, time);*/
 
-
 function reFresh()
 
 {
@@ -19,5 +18,5 @@ function reFresh()
   $('#entrada').addClass('hidden');
 }
 
-var repeticion = window.setInterval("reFresh()", 5000);
+var repeticion = window.setInterval("reFresh()", 2000);
 
