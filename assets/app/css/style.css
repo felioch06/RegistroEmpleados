@@ -1,3 +1,44 @@
-#FF9F00
+/* #FF9F00
 #98B926
-#089698
+#089698 */
+
+*{
+    margin:0px;
+}
+.hidden{
+    display: none;
+}
+
+.banner{
+    background-color: #98B926 !important;
+    padding: 10px 20px 1px 20px;
+    font-size: 15px !important;
+}
+
+footer{
+    background-color: #98B926 !important;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.mg-20-top-bottom{
+    margin: 20px 0px 20px 0px !important;
+}
+
+.mg-10-top{
+    margin-top: 12px !important;
+}
+
+.pd-20-all{
+    padding: 30px !important;
+}
+
+.mg-10-bottom{
+    margin-bottom: 14px !important;
+}
+
+.pd-20-top-bottom{
+    padding-top: 30px!important;
+    padding-bottom: 40px!important;
+}
