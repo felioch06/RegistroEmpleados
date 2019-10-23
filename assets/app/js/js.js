@@ -16,7 +16,10 @@ function reFresh()
 {
   $('#salida').addClass('hidden');
   $('#entrada').addClass('hidden');
+  $('#yaIngreso').addClass('hidden');
+  $('#yaIngresoSalida').addClass('hidden');
+  $('#noExiste').addClass('hidden');
 }
 
-var repeticion = window.setInterval("reFresh()", 2000);
+var repeticion = window.setInterval("reFresh()", 7000);
 
