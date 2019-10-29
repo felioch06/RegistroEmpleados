@@ -13,8 +13,7 @@
     <div class="sixteen wide column">
         <h2 class="ui orange header">
             <?php 
-                    echo $consulta->nombres.' '. $consulta->apellidos .'<br>'. $consulta->documento; 
-                
+                    echo $consulta->nombres.' '. $consulta->apellidos .'<br>'. $consulta->documento;    
             ?>
         </h2>
         <div class="ui divider"></div>
