@@ -76,9 +76,9 @@
             }
         }
 
-        public function consultaTodaFecha(){
+        public function consultaTodaFecha($n){
             try{
-                $str = parent::conectar()->prepare("SELECT * FROM control_empleado  INNER JOIN usuarios WHERE control_empleado.fk_usuario = usuarios.id_usuario");
+                $str = parent::conectar()->prepare("SELECT * FROM control_empleado  INNER JOIN usuarios WHERE control_empleado.fk_usuario = usuarios.id_usuario AND fk_usuario = '$n' ");
                 $str->execute();
                 return $str->fetchAll(PDO::FETCH_OBJ);
             }catch(Exception $e){

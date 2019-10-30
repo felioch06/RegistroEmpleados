@@ -32,6 +32,20 @@
             </form>
         </div>
 
+        <div class="ui segment">
+            <form action="?class=Administradores&view=consultarEmpleado" method="post">
+                <div class="ui orange header">
+                    Horas Trabajadas
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui fluid input">
+                <input type="number" name="red" required>
+                </div>
+
+                <button class="ui fluid mg-10-top green button">Enviar</button>
+            </form>
+        </div>
+
     </div>
     <div class="twelve wide column">
         <?php if(isset($_REQUEST['documento'])){ ?>
@@ -54,6 +68,7 @@
             $consultaConsulta = parent::consultaControl($consultaEmpleados->id_usuario);
             foreach($consultaEmpleadosAll as $r){
                 foreach($consultaConsulta as $o){
+
             ?> 
 
                 <tr>
@@ -64,7 +79,41 @@
                 <td ><?php echo $o->hora_salida ?></td>
                 
                 </tr>
-            <?php } } ?>
+            <?php } }  ?>
+            </tbody>
+        </table>       
+        <?php } ?>
+
+        <?php if(isset($_REQUEST['red'])){ ?>
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th>Nombres y Apelldos</th>
+                    <th>Documento</th>
+                    <th>Horas Trabajadas</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <?php 
+            $documento = $_REQUEST['red'];
+            $consultaEmpleados = parent::consultaDocumento($documento);
+            $consultaEmpleadosAll = parent::consultaDocumentoAll($documento);
+            $consultaFecha = parent::consultaTodaFecha($consultaEmpleados->id_usuario);
+            foreach($consultaEmpleadosAll as $r){
+                    foreach($consultaFecha as $k){
+                        $m = explode(':', $k->hora_entrada);
+                        $s = explode(':', $k->hora_salida);
+
+            ?> 
+
+                <tr>
+                <td ><?php echo $r->nombres.' '. $r->apellidos?></td>
+                <td ><?php echo $r->documento ?></td>
+                <td ><?php echo $s[0] - $m[0] ?></td>
+                
+                </tr>
+            <?php } }  ?>
             </tbody>
         </table>       
         <?php } ?>
@@ -81,7 +130,7 @@
             </thead>
             <tbody>
 
-            <?php 
+            <?php
             $fecha = $_REQUEST['fecha'];
             $consultaFecha = parent::consultaFecha($fecha);
 
@@ -102,14 +151,10 @@
     </div>
 </div>
 
-<?php $consultaFecha = parent::consultaTodaFecha();
-    foreach($consultaFecha as $r)
-    $pipe = $r->fecha.'-';
-    $cosa = explode('-', $pipe);
-    echo $cosa[0];
-    echo $cosa[1];
-    echo $cosa[2];
-    echo $cosa[3];
+<?php 
+
+        
+
     
 ?>
 
