@@ -30,9 +30,9 @@
             }
         }
 
-        public function consultaRegistroEmpleado($fk_usuario){
+        public function consultaRegistroEmpleado($fk_usuario, $fecha_reporte){
             try{
-                $str = parent::conectar()->prepare("SELECT * FROM control_empleado WHERE fk_usuario = $fk_usuario");
+                $str = parent::conectar()->prepare("SELECT * FROM control_empleado WHERE fk_usuario = $fk_usuario AND fecha = '$fecha_reporte'");
                 $str->execute();
                 return $str->fetch(PDO::FETCH_OBJ);
             }catch(Exception $e){

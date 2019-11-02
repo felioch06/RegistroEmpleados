@@ -33,7 +33,7 @@
 
             if($cantidad->documento > 0){
                 $consulta = parent::consultaDocumento($documento);
-                @$consultaControlEmpleado = parent::consultaRegistroEmpleado($consulta->id_usuario);
+                @$consultaControlEmpleado = parent::consultaRegistroEmpleado($consulta->id_usuario, $fecha);
 
                 if($consulta->documento == $documento){
                     if($fecha == $consultaControlEmpleado->fecha && $documento == $consulta->documento){
@@ -61,7 +61,7 @@
   
             if($cantidad->documento > 0){
                 $consulta = parent::consultaDocumento($documento);
-                $consultaControlEmpleado = parent::consultaRegistroEmpleado($consulta->id_usuario);
+                $consultaControlEmpleado = parent::consultaRegistroEmpleado($consulta->id_usuario, $fecha);
 
                 if($consultaControlEmpleado->hora_salida == null && $fecha == $consultaControlEmpleado->fecha){
                 parent::registroExit($hora_actual, $fecha, $consulta->id_usuario);
